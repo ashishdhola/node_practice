@@ -9,17 +9,17 @@ const requrestHandler = (req, res)=>{
         case '/':
             filePath = './index.html'
             break;
-        case '/contect':
-            filePath = './contect.html'
+        case '/contact':
+            filePath = './Contact.html'
             break;
-        case '/error':
-            filePath = './error.html'
+        case '/about':
+            filePath = './about.html'
             break;
         case '/product':
             filePath = './product.html'
             break;
         default:
-            filePath = './about.html'
+            filePath = './error.html'
             break;
     }
     let data = fs.readFileSync(filePath);
