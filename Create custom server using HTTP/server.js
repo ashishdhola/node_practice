@@ -10,7 +10,7 @@ const requrestHandler = (req, res)=>{
             filePath = './index.html'
             break;
         case '/contact':
-            filePath = './Contact.html'
+            filePath = './contact.html'
             break;
         case '/about':
             filePath = './about.html'
