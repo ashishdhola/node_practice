@@ -7,7 +7,7 @@ app.set("view engine", 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 const validate = (req, res, next) => {
-    if (req.query.name >= 'ashish') {
+    if (req.query.name == 'ashish') {
         next();
     } else {
         return res.redirect('/');
@@ -15,8 +15,8 @@ const validate = (req, res, next) => {
 }
 
 const user = (req, res, next) => {
-    if (req.query.pass >= 123) {
-        next();
+    if (req.query.pass >= 3) {
+        next()
     } else {
         return res.redirect('/');
     }
