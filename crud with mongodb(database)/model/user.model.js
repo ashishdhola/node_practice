@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
-    fname: String, // short hand property 
+    fname: String,  
     lname: {
         type: String
     },
