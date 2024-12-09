@@ -7,12 +7,10 @@
     <title>BookStore</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles can go here */
     </style>
 </head>
 
 <body class="bg-gray-100">
-    <!-- Header -->
     <header class="bg-blue-800 text-white flex justify-center items-center h-16">
         <nav class="flex space-x-8">
             <a href="/" class="hover:text-gray-300 transition">Home</a>
@@ -22,10 +20,8 @@
 
     <div class="container mx-auto mt-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <% bookData.map((val) => { %>
+            <% bookData.map((val)=> { %>
                 <div class="bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105">
-                    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKpSzNgS-KNDywYYqA_7WoAd2JgWNFX6QWAw&s"
-                        class="rounded-t-lg h-48 w-full object-cover" alt="Book Cover" /> -->
 
                     <div class="p-4">
                         <h5 class="text-lg font-bold">
@@ -44,24 +40,26 @@
                         <p class="text-gray-700">
                             <b>Year: </b>
                             <%= val.year %>
-                            &nbsp;&nbsp;
-                            <b>Pages: </b>
-                            <%= val.pages %>
+                                &nbsp;&nbsp;
+                                <b>Pages: </b>
+                                <%= val.pages %>
                         </p>
 
                         <p class="text-gray-700">
                             <b>Country: </b>
                             <%= val.country %>
-                            <a href="<%= val.link %>" class="text-blue-500 hover:underline">Link</a>
+                                <a href="<%= val.link %>" class="text-blue-500 hover:underline">Link</a>
                         </p>
 
                         <div class="flex justify-between mt-4">
-                            <a href="/updateBook/<%= val.id %>" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Update</a>
-                            <a href="/deleteBook/<%= val.id %>" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">Delete</a>
+                            <a href="/updateBook/<%= val.id %>"
+                                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Update</a>
+                            <a href="/deleteBook/<%= val.id %>"
+                                class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">Delete</a>
                         </div>
                     </div>
                 </div>
-            <% }) %>
+                <% }) %>
         </div>
     </div>
 </body>

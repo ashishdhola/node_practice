@@ -16,7 +16,6 @@ app.get('/', async (req, res) => {
     return res.render('index', { bookData });
 })
 
-// -----------------------ADD USER------------------------------
 app.get('/addBook', async (req, res) => {
     return res.render('book');
 })
@@ -32,7 +31,6 @@ app.post('/addBook', async (req, res) => {
     return res.redirect('/');
 });
 
-// -----------------------DELETE USER------------------------------
 app.get('/deleteBook/:id', async (req, res) => {
     let deleteBook = await book.findById(req.params.id);
 
@@ -46,7 +44,6 @@ app.get('/deleteBook/:id', async (req, res) => {
     }
 })
 
-// -----------------------UPDATE USER------------------------------
 app.get('/updateBook/:id', async (req, res) => {
     let updateBook = await book.findById(req.params.id);
 
