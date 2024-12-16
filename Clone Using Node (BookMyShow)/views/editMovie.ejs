@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Movie</title>
+</head>
+<body>
+    <h1>Edit Movie</h1>
+    <form action="/movie/updateMovie/<%= movie._id %>" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" value="<%= movie.title %>" required>
+        <br>
+        <label for="director">Director:</label>
+        <input type="text" name="director" value="<%= movie.director %>" required>
+        <br>
+        <label for="releaseYear">Release Year:</label>
+        <input type="number" name="releaseYear" value="<%= movie.releaseYear %>" required>
+        <br>
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" value="<%= movie.genre %>">
+        <br>
+        <label for="description">Description:</label>
+        <textarea name="description"><%= movie.description %></textarea>
+        <br>
+        <button type="submit">Update Movie</button>
+    </form>
+    <a href="/movie">Back to Movie List</a>
+</body>
+</html>
