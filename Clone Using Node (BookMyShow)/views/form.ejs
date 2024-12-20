@@ -11,18 +11,13 @@
 <body class="bg-gray-900 text-gray-200 flex justify-center mt-5">
 
     <div class="w-full max-w-lg">
-        <!-- Navigation Links -->
         <div class="flex justify-between mb-5">
             <a href="/" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-500">← Back</a>
             <a href="/movie" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-500">Movie List</a>
         </div>
-        <!-- Form Container -->
         <div class="bg-gray-800 rounded-lg shadow-lg p-8">
             <h2 class="text-3xl font-bold text-red-500 mb-6 text-center">Add New Movie</h2>
-
-            <!-- Form -->
             <form action="/movie/form/addMovie" method="post" class="space-y-6" enctype="multipart/form-data">
-                <!-- Movie Name & Actor -->
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label for="Moviename" class="block text-sm font-medium text-gray-400">Movie Name</label>
@@ -38,7 +33,6 @@
                     </div>
                 </div>
 
-                <!-- Release Year & Movie Type -->
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label for="releaseYear" class="block text-sm font-medium text-gray-400">Release Year</label>
@@ -58,14 +52,12 @@
                     </div>
                 </div>
 
-                <!-- Movie Image Upload -->
                 <div>
                     <label for="movieImage" class="block text-sm font-medium text-gray-400">Movie Image</label>
                     <input type="file" id="movieImage" name="movieImage"
                         class="mt-1 block w-full bg-gray-700 text-gray-200 px-4 py-2 border border-gray-600 rounded-md focus:ring-red-500 focus:border-red-500">
                 </div>
 
-                <!-- Submit Button -->
                 <div>
                     <button type="submit"
                         class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">

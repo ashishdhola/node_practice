@@ -12,7 +12,6 @@ app.get("/",(req,res)=>{
    return res.render("index")
 })
 
-// app.use("/form",require("./routes/formRoutes"))
 app.use("/movie",require("./routes/movie.Routes"));
 
 app.listen(port,(err)=>{
