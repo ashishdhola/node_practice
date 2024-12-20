@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= singleMovie.title %> - MovieFlix
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Header / Navigation -->
+    <header class="bg-black py-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="/movie" class="text-4xl font-bold text-red-600 hover:text-red-500">
+                MovieFlix
+            </a>
+            <a href="/movie" class="text-gray-300 hover:text-white text-sm">
+                ← Back to all Movies List
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto py-10 px-4">
+        <div class="bg-gray-800 rounded-lg overflow-hidden flex flex-col md:flex-row shadow-xl">
+            <!-- Movie Image -->
+            <div class="md:w-2/3">
+                <img src="<%= singleMovie.movieImage %>" alt="<%= singleMovie.title %>"
+                    class="w-full h-[400px] object-cover">
+            </div>
+
+            <!-- Movie Details -->
+            <div class="md:w-1/2 p-6 flex flex-col justify-center">
+                <h1 class="text-4xl font-bold text-white mb-4">
+                    <%= singleMovie.title %>
+                </h1>
+                <p class="text-gray-400 mb-2">
+                    <strong class="text-gray-300">Director:</strong> <%= singleMovie.director %>
+                </p>
+                <p class="text-gray-400 mb-2">
+                    <strong class="text-gray-300">Release Year:</strong> <%= singleMovie.releaseYear %>
+                </p>
+                <p class="text-gray-400 mb-2">
+                    <strong class="text-gray-300">Genre:</strong> <%= singleMovie.genre %>
+                </p>
+                <p class="text-gray-300 mt-6 leading-relaxed">
+                    <%= singleMovie.description %>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black py-4">
+        <div class="container mx-auto text-center text-gray-400 text-sm">
+            © 2024 MovieFlix. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>

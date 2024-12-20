@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Add Movie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-200 flex justify-center mt-5">
+
+    <div class="w-full max-w-lg">
+        <!-- Navigation Links -->
+        <div class="flex justify-between mb-5">
+            <a href="/" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-500">← Back</a>
+            <a href="/movie" class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-500">Movie List</a>
+        </div>
+
+        <!-- Form Container -->
+        <div class="bg-gray-800 rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-red-500 mb-6 text-center">Add New Movie</h2>
+
+            <!-- Form -->
+            <form action="/movie/form/addMovie" method="post" class="space-y-6" enctype="multipart/form-data">
+
+                <!-- Movie Name & Actor -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="Moviename" class="block text-sm font-medium text-gray-400">Movie Name</label>
+                        <input type="text" id="Moviename" name="Moviename" placeholder="Enter movie name"
+                            class="mt-1 block w-full px-4 py-2 bg-gray-700 text-gray-200 border border-gray-600 rounded-md focus:ring-red-500 focus:border-red-500"
+                            required>
+                    </div>
+                    <div>
+                        <label for="actor" class="block text-sm font-medium text-gray-400">Actor</label>
+                        <input type="text" id="actor" name="actor" placeholder="Enter actor's name"
+                            class="mt-1 block w-full px-4 py-2 bg-gray-700 text-gray-200 border border-gray-600 rounded-md focus:ring-red-500 focus:border-red-500"
+                            required>
+                    </div>
+                </div>
+
+                <!-- Release Year & Movie Type -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="releaseYear" class="block text-sm font-medium text-gray-400">Release Year</label>
+                        <input type="number" id="releaseYear" name="releaseYear" placeholder="Enter release year"
+                            class="mt-1 block w-full px-4 py-2 bg-gray-700 text-gray-200 border border-gray-600 rounded-md focus:ring-red-500 focus:border-red-500"
+                            required>
+                    </div>
+                    <div>
+                        <label for="movietype" class="block text-sm font-medium text-gray-400">Movie Type</label>
+                        <select id="movietype" name="movietype"
+                            class="mt-1 block w-full px-4 py-2 bg-gray-700 text-gray-200 border border-gray-600 rounded-md focus:ring-red-500 focus:border-red-500">
+                            <option value="Action">Action</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Horror">Horror</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Movie Image Upload -->
+                <div>
+                    <label for="movieImage" class="block text-sm font-medium text-gray-400">Movie Image</label>
+                    <input type="file" id="movieImage" name="movieImage"
+                        class="mt-1 block w-full bg-gray-700 text-gray-200 px-4 py-2 border border-gray-600 rounded-md focus:ring-red-500 focus:border-red-500">
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit"
+                        class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500">
+                        Add Movie
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
