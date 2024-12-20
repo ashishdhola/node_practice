@@ -26,7 +26,7 @@ exports.addMovie= async (req, res) => {
             let newMovie = await Movie.create(req.body);
             if (newMovie) {
                 console.log('Movie Added');
-                return res.redirect('/showmovie');
+                return res.redirect('/movie');
             } else {
                 console.log("Somthing Wrong");
                 return res.redirect("/");
@@ -46,10 +46,10 @@ exports.deleteMovie= async (req, res) => {
             await fs.unlinkSync(imagepath);
             await Movie.findByIdAndDelete(req.params.id);
             console.log("Delete Success");
-            return res.redirect('/showmovie');
+            return res.redirect('/movie');
         } else {
             console.log('Somthing Wrong');
-            return res.redirect('/showmovie');
+            return res.redirect('/movie');
         }
     } catch (error) {
         console.log("something Went Wrong", error);
@@ -78,7 +78,7 @@ exports.updateMovie=  async (req, res) => {
         }
         await Movie.findByIdAndUpdate(req.params.id, req.body, { new: true });
         console.log('Update Success');
-        return res.redirect("/showmovie");
+        return res.redirect("/movie");
     }
 }
 

@@ -8,7 +8,7 @@ const { moviePage, form, addMovie, deleteMovie, editMovie, updateMovie, singleMo
 
 movieRoutes.get("/", moviePage)
 movieRoutes.get("/form", form)
-movieRoutes.post("/form/addMovie", Movie.uploadImage,addMovie )
+movieRoutes.post("/form/addmovie", Movie.uploadImage,addMovie )
 movieRoutes.get('/delete/:id', deleteMovie);
 movieRoutes.get("/edit/:id",editMovie);
 movieRoutes.post("/updateMovie/:id", Movie.uploadImage, updateMovie)
